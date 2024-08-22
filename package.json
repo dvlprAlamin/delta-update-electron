@@ -1,0 +1,112 @@
+{
+  "name": "delta-update-electron",
+  "version": "2.0.8",
+  "description": "A minimal Electron application",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist:mac": "electron-builder --mac",
+    "dist:win": "electron-builder --win",
+    "dist": "electron-builder --win --mac --x64",
+    "release": "electron-builder --win --mac --x64 --publish=always",
+    "release:win": "electron-builder --win --x64 --publish=always",
+    "release:mac": "electron-builder --mac --x64 --publish=always"
+  },
+  "repository": "https://github.com/dvlprAlamin/delta-update-electron",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "@electron-delta/builder": "0.1.17",
+    "electron": "^21.1.1",
+    "electron-builder": "^23.6.0"
+  },
+  "build": {
+    "appId": "com.electron.delta",
+    "compression": "maximum",
+    "mac": {
+      "gatekeeperAssess": true,
+      "category": "public.app-category.developer-tools",
+      "target": [
+        {
+          "target": "zip",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "dmg",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "publish": [
+        {
+          "provider": "github"
+        }
+      ]
+    },
+    "dmg": {
+      "writeUpdateInfo": false
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowElevation": true,
+      "runAfterFinish": true,
+      "differentialPackage": true,
+      "createDesktopShortcut": "always",
+      "deleteAppDataOnUninstall": true,
+      "artifactName": "${productName}-${version}.${ext}",
+      "uninstallDisplayName": "${productName}",
+      "installerIcon": "icon.ico",
+      "installerHeaderIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico"
+    },
+    "nsisWeb": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowElevation": true,
+      "runAfterFinish": true,
+      "differentialPackage": true,
+      "createDesktopShortcut": "always",
+      "deleteAppDataOnUninstall": true,
+      "artifactName": "${productName}-Setup-${version}.${ext}",
+      "uninstallDisplayName": "${productName}",
+      "installerIcon": "icon.ico",
+      "installerHeaderIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico"
+    },
+    "win": {
+      "target": [
+        "nsis-web"
+      ],
+      "publish": [
+        {
+          "provider": "github"
+        }
+      ]
+    },
+    "files": [
+      "src/**/*",
+      "package.json",
+      "icon.ico",
+      "tray.png",
+      "blog.png"
+    ],
+    "afterAllArtifactBuild": ".electron-delta.js"
+  },
+  "dependencies": {
+    "@electron-delta/updater": "0.1.17",
+    "axios": "^0.27.2",
+    "electron-log": "^4.4.7"
+  }
+}
