@@ -47,18 +47,18 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "18"
           architecture: "x64"
-      - name: npm install
-        run: npm ci
+      - name: yarn install
+        run: yarn install --frozen-lockfile
       - name: configure git
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          npm version patch
+          yarn version --patch
           git commit -m "release [skip ci]" --amend
       - name: electron builder build and publish
-        run: npm run release:win
+        run: yarn release:win
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           # CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
