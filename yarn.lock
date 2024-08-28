@@ -15,10 +15,10 @@
     ajv "^6.12.0"
     ajv-keywords "^3.4.1"
 
-"@electron-delta/builder@0.1.17":
-  version "0.1.17"
-  resolved "https://registry.yarnpkg.com/@electron-delta/builder/-/builder-0.1.17.tgz#4575fd70320b15061d32a03faa31779b67a93398"
-  integrity sha512-Ygm+oe2vYLFebCM4iAwjxfdsB3aA5aitFBvSYDy6YZUaGXZhVvQ2uMJCLV91H5QxFwcGaoMyrxlDshm6tA4+Sg==
+"@electron-delta-update/builder@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@electron-delta-update/builder/-/builder-0.1.0.tgz#f2fb942a2f29c826a80f7da36e82d79eac2be0c1"
+  integrity sha512-1QDjYdeE6zduoy8ofpu87kap2OuEgDz5xuZSKgPGhzIXkYdQKV4sqhGlMT/yTc/BFYBgxUBrQNycsMB32GGOcw==
   dependencies:
     "7zip-bin" "^5.2.0"
     env-paths "^2.2.1"
@@ -27,10 +27,10 @@
     node-7z "^3.0.0"
     semver "^7.3.7"
 
-"@electron-delta/updater@0.1.17":
-  version "0.1.17"
-  resolved "https://registry.yarnpkg.com/@electron-delta/updater/-/updater-0.1.17.tgz#4b87c468b44342fa4e7f3f4ee9361d321f4d9817"
-  integrity sha512-ZiFVJ3HP3CXqUzvTK153nWM6rdjwJ8t9Qe5W2y9+vXwPRtXOnYa7J5mbcQ0ihEeNJaIoRCwOsUkbfUsvJCtMEQ==
+"@electron-delta-update/updater@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@electron-delta-update/updater/-/updater-0.1.0.tgz#2a4236fdeca27454cba791105137f0ea0d131c7d"
+  integrity sha512-nzfcbPq9Da2YNM9d7n6koDNnoOayc/fgQ7wINPuZ//YXQgp6uzBO0EYauRlgEmO8ZkrlxO6xg2J9fNfAxsQpfg==
   dependencies:
     cross-fetch "^3.1.5"
     electron-updater "^5.0.1"

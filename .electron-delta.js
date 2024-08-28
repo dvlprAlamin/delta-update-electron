@@ -1,5 +1,5 @@
 // .electron-delta.js
-const DeltaBuilder = require("@electron-delta/builder");
+const DeltaBuilder = require("@electron-delta-update/builder");
 
 const path = require("path");
 const getPreviousReleases = require("./build_scripts/get-previous-releases");

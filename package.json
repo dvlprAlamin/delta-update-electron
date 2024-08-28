@@ -1,6 +1,6 @@
 {
   "name": "delta-update-electron",
-  "version": "2.1.2",
+  "version": "2.1.4",
   "description": "A minimal Electron application",
   "main": "src/main.js",
   "scripts": {
@@ -24,7 +24,7 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "@electron-delta/builder": "0.1.17",
+    "@electron-delta-update/builder": "^0.1.0",
     "electron": "^32.0.1",
     "electron-builder": "^24.13.3"
   },
@@ -105,7 +105,7 @@
     "afterAllArtifactBuild": ".electron-delta.js"
   },
   "dependencies": {
-    "@electron-delta/updater": "0.1.17",
+    "@electron-delta-update/updater": "^0.1.0",
     "axios": "^1.7.5",
     "electron-log": "^5.1.7"
   }

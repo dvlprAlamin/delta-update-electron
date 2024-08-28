@@ -2,7 +2,7 @@ const { app, BrowserWindow, ipcMain, Tray, Menu } = require("electron");
 const path = require("path");
 const logger = require("electron-log");
 
-const DeltaUpdater = require("@electron-delta/updater");
+const DeltaUpdater = require("@electron-delta-update/updater");
 
 let mainWindow, tray;
 
