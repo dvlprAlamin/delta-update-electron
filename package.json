@@ -107,6 +107,6 @@
   "dependencies": {
     "@electron-delta/updater": "0.1.17",
     "axios": "^1.7.5",
-    "electron-log": "^5.1.7"
+    "electron-log": "^5.2.0"
   }
 }
